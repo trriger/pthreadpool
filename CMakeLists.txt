@@ -1,0 +1,5 @@
+project(pthread_demo)
+AUX_SOURCE_DIRECTORY(./pthreadpool1 DIR_SRC)
+add_executable(demo ${DIR_SRC})
+link_directories(/usr/lib/x86_64-linux-gnu/)
+target_link_libraries(demo pthread)
