@@ -134,5 +134,4 @@ void destroy_tpool(tpool_t* pool)
    pthread_mutex_destroy(&pool->queue_lock);
    pthread_cond_destroy(&pool->queue_ready);
    free(pool);
-   return 1;
 }
