@@ -113,7 +113,9 @@ void destroy_tpool(tpool_t* pool)
 {
    tpool_work_t* tmp_work;
  
-   while(pool->shutdown || !is_taskover(pool));
+   while(pool->shutdown || !is_taskover(pool)){
+     usleep(50000);
+   }
    
    pool->shutdown = 1;
  
